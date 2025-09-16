@@ -11,6 +11,7 @@
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
     <PublishRelease>true</PublishRelease>
     <NullabilityInfoContextSupport>true</NullabilityInfoContextSupport>
+    <RootNamespace>ClientApp</RootNamespace>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

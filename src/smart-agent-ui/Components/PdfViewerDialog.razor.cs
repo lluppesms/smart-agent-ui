@@ -15,13 +15,17 @@ public sealed partial class PdfViewerDialog : Microsoft.AspNetCore.Components.Co
     protected override async Task OnInitializedAsync()
     {
         await base.OnInitializedAsync();
-        await JavaScriptModule.RegisterIFrameLoadedAsync(
-            "#pdf-viewer",
-            () =>
-            {
-                _isLoading = false;
-                StateHasChanged();
-            });
+        // TODO: Replace with Blazor Server-compatible JavaScript interop
+        // await JavaScriptModule.RegisterIFrameLoadedAsync(
+        //     "#pdf-viewer",
+        //     () =>
+        //     {
+        //         _isLoading = false;
+        //         StateHasChanged();
+        //     });
+        
+        // For now, just set loading to false
+        _isLoading = false;
     }
 
     private void OnCloseClick() => Dialog.Close(DialogResult.Ok(true));

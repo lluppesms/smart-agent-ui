@@ -270,7 +270,7 @@ public sealed class ApiClient(HttpClient httpClient)
             Headers = { { "Accept", "application/json" } },
             Content = new StringContent(System.Text.Json.JsonSerializer.Serialize(request), Encoding.UTF8, "application/json")
         };
-        httpRequest.SetBrowserResponseStreamingEnabled(true);
+        // Removed WebAssembly-specific SetBrowserResponseStreamingEnabled for Blazor Server compatibility
         using var response = await httpClient.SendAsync(httpRequest, HttpCompletionOption.ResponseHeadersRead, cancellationToken);
         response.EnsureSuccessStatusCode();
         using var responseStream = await response.Content.ReadAsStreamAsync(cancellationToken);

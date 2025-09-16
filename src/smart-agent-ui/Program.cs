@@ -31,7 +31,7 @@ builder.Services.AddHttpContextAccessor();
 builder.Services.AddMudServices();
 
 // Frontend local/session storage services - server-side implementations
-builder.Services.AddScoped<ILocalStorageService, InMemoryStorageService>();
+builder.Services.AddScoped<ClientApp.Services.ILocalStorageService, ClientApp.Services.InMemoryStorageService>();
 
 // bind configuration
 builder.Services.AddOptions<AppConfiguration>()
@@ -102,7 +102,7 @@ builder.Services.AddCustomHealthChecks();
 var app = builder.Build();
 
 // Configure client app configuration
-ClientAppConfiguration.Load(builder.Configuration);
+ClientApp.ClientAppConfiguration.Load(builder.Configuration);
 
 if (app.Environment.IsDevelopment())
 {
