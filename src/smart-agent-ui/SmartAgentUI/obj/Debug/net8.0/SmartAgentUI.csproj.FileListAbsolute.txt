@@ -1,0 +1,8 @@
+/home/runner/work/smart-agent-ui/smart-agent-ui/src/smart-agent-ui/SmartAgentUI/obj/Debug/net8.0/SmartAgentUI.csproj.AssemblyReference.cache
+/home/runner/work/smart-agent-ui/smart-agent-ui/src/smart-agent-ui/SmartAgentUI/obj/Debug/net8.0/SmartAgentUI.GeneratedMSBuildEditorConfig.editorconfig
+/home/runner/work/smart-agent-ui/smart-agent-ui/src/smart-agent-ui/SmartAgentUI/obj/Debug/net8.0/SmartAgentUI.AssemblyInfoInputs.cache
+/home/runner/work/smart-agent-ui/smart-agent-ui/src/smart-agent-ui/SmartAgentUI/obj/Debug/net8.0/SmartAgentUI.AssemblyInfo.cs
+/home/runner/work/smart-agent-ui/smart-agent-ui/src/smart-agent-ui/SmartAgentUI/obj/Debug/net8.0/SmartAgentUI.csproj.CoreCompileInputs.cache
+/home/runner/work/smart-agent-ui/smart-agent-ui/src/smart-agent-ui/SmartAgentUI/obj/Debug/net8.0/SmartAgentUI.MvcApplicationPartsAssemblyInfo.cs
+/home/runner/work/smart-agent-ui/smart-agent-ui/src/smart-agent-ui/SmartAgentUI/obj/Debug/net8.0/SmartAgentUI.MvcApplicationPartsAssemblyInfo.cache
+/home/runner/work/smart-agent-ui/smart-agent-ui/src/smart-agent-ui/SmartAgentUI/obj/Debug/net8.0/SmartAgentUI.sourcelink.json

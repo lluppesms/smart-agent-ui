@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "h2dSbTzFX74vOA1wrJXjpT23y0q/pRj26Fv1ws8r7sFRs6d0novau5v7MTYvDVRPB/VemGKT8EY3o2sojLvw4A==",
+  "success": true,
+  "projectFilePath": "/home/runner/work/smart-agent-ui/smart-agent-ui/src/smart-agent-ui/shared/Shared/Shared.csproj",
+  "expectedPackageFiles": [
+    "/home/runner/.nuget/packages/microsoft.extensions.configuration.abstractions/9.0.2/microsoft.extensions.configuration.abstractions.9.0.2.nupkg.sha512",
+    "/home/runner/.nuget/packages/microsoft.extensions.primitives/9.0.2/microsoft.extensions.primitives.9.0.2.nupkg.sha512",
+    "/home/runner/.nuget/packages/newtonsoft.json/13.0.3/newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

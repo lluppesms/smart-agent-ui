@@ -1,0 +1,158 @@
+is_global = true
+build_property.MudDebugAnalyzer = 
+build_property.MudAllowedAttributePattern = 
+build_property.MudAllowedAttributeList = 
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = SmartAgentUI
+build_property.RootNamespace = SmartAgentUI
+build_property.ProjectDir = /home/runner/work/smart-agent-ui/smart-agent-ui/src/smart-agent-ui/SmartAgentUI/
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = /home/runner/work/smart-agent-ui/smart-agent-ui/src/smart-agent-ui/SmartAgentUI
+build_property._RazorSourceGeneratorDebug = 
+
+[/home/runner/work/smart-agent-ui/smart-agent-ui/src/smart-agent-ui/SmartAgentUI/Components/Answer.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9BbnN3ZXIucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/runner/work/smart-agent-ui/smart-agent-ui/src/smart-agent-ui/SmartAgentUI/Components/AnswerError.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9BbnN3ZXJFcnJvci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/runner/work/smart-agent-ui/smart-agent-ui/src/smart-agent-ui/SmartAgentUI/Components/App.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9BcHAucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/runner/work/smart-agent-ui/smart-agent-ui/src/smart-agent-ui/SmartAgentUI/Components/ConditionalStyles.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9Db25kaXRpb25hbFN0eWxlcy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/runner/work/smart-agent-ui/smart-agent-ui/src/smart-agent-ui/SmartAgentUI/Components/CreateAgentDialog.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9DcmVhdGVBZ2VudERpYWxvZy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/runner/work/smart-agent-ui/smart-agent-ui/src/smart-agent-ui/SmartAgentUI/Components/DeleteAgentConfirmationDialog.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9EZWxldGVBZ2VudENvbmZpcm1hdGlvbkRpYWxvZy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/runner/work/smart-agent-ui/smart-agent-ui/src/smart-agent-ui/SmartAgentUI/Components/DisclaimerDialog.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9EaXNjbGFpbWVyRGlhbG9nLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/runner/work/smart-agent-ui/smart-agent-ui/src/smart-agent-ui/SmartAgentUI/Components/EditAgentDialog.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9FZGl0QWdlbnREaWFsb2cucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/runner/work/smart-agent-ui/smart-agent-ui/src/smart-agent-ui/SmartAgentUI/Components/Examples.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9FeGFtcGxlcy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/runner/work/smart-agent-ui/smart-agent-ui/src/smart-agent-ui/SmartAgentUI/Components/FeedbackDialog.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9GZWVkYmFja0RpYWxvZy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/runner/work/smart-agent-ui/smart-agent-ui/src/smart-agent-ui/SmartAgentUI/Components/Layout/LogoutDisplay.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9MYXlvdXQvTG9nb3V0RGlzcGxheS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/runner/work/smart-agent-ui/smart-agent-ui/src/smart-agent-ui/SmartAgentUI/Components/Loading.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9Mb2FkaW5nLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/runner/work/smart-agent-ui/smart-agent-ui/src/smart-agent-ui/SmartAgentUI/Components/Pages/Agents.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9BZ2VudHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/runner/work/smart-agent-ui/smart-agent-ui/src/smart-agent-ui/SmartAgentUI/Components/Pages/Chat.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9DaGF0LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/runner/work/smart-agent-ui/smart-agent-ui/src/smart-agent-ui/SmartAgentUI/Components/Pages/Collections.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9Db2xsZWN0aW9ucy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/runner/work/smart-agent-ui/smart-agent-ui/src/smart-agent-ui/SmartAgentUI/Components/Pages/Counter.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9Db3VudGVyLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/runner/work/smart-agent-ui/smart-agent-ui/src/smart-agent-ui/SmartAgentUI/Components/Pages/Docs.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9Eb2NzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/runner/work/smart-agent-ui/smart-agent-ui/src/smart-agent-ui/SmartAgentUI/Components/Pages/Error.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9FcnJvci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/runner/work/smart-agent-ui/smart-agent-ui/src/smart-agent-ui/SmartAgentUI/Components/Pages/History.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9IaXN0b3J5LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/runner/work/smart-agent-ui/smart-agent-ui/src/smart-agent-ui/SmartAgentUI/Components/Pages/HistoryV2.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9IaXN0b3J5VjIucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/runner/work/smart-agent-ui/smart-agent-ui/src/smart-agent-ui/SmartAgentUI/Components/Pages/Home.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9Ib21lLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/runner/work/smart-agent-ui/smart-agent-ui/src/smart-agent-ui/SmartAgentUI/Components/Pages/Ingestion.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9Jbmdlc3Rpb24ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/runner/work/smart-agent-ui/smart-agent-ui/src/smart-agent-ui/SmartAgentUI/Components/Pages/Settings.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9TZXR0aW5ncy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/runner/work/smart-agent-ui/smart-agent-ui/src/smart-agent-ui/SmartAgentUI/Components/Pages/Weather.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9XZWF0aGVyLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/runner/work/smart-agent-ui/smart-agent-ui/src/smart-agent-ui/SmartAgentUI/Components/PdfViewerDialog.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QZGZWaWV3ZXJEaWFsb2cucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/runner/work/smart-agent-ui/smart-agent-ui/src/smart-agent-ui/SmartAgentUI/Components/Question.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9RdWVzdGlvbi5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/runner/work/smart-agent-ui/smart-agent-ui/src/smart-agent-ui/SmartAgentUI/Components/Routes.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9Sb3V0ZXMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/runner/work/smart-agent-ui/smart-agent-ui/src/smart-agent-ui/SmartAgentUI/Components/SettingsPanel.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9TZXR0aW5nc1BhbmVsLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/runner/work/smart-agent-ui/smart-agent-ui/src/smart-agent-ui/SmartAgentUI/Components/SupportingContent.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9TdXBwb3J0aW5nQ29udGVudC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/runner/work/smart-agent-ui/smart-agent-ui/src/smart-agent-ui/SmartAgentUI/Components/TextInputV3.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9UZXh0SW5wdXRWMy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/runner/work/smart-agent-ui/smart-agent-ui/src/smart-agent-ui/SmartAgentUI/Components/TextInputV4.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9UZXh0SW5wdXRWNC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/runner/work/smart-agent-ui/smart-agent-ui/src/smart-agent-ui/SmartAgentUI/Components/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9fSW1wb3J0cy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/runner/work/smart-agent-ui/smart-agent-ui/src/smart-agent-ui/SmartAgentUI/Components/Layout/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9MYXlvdXQvTWFpbkxheW91dC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-vqc8hvx1kw
+
+[/home/runner/work/smart-agent-ui/smart-agent-ui/src/smart-agent-ui/SmartAgentUI/Components/Layout/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9MYXlvdXQvTmF2TWVudS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-p2fdmvvt06
