@@ -13,8 +13,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		nuget.config = nuget.config
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shared", "..\SmartFlowUI\shared\Shared\Shared.csproj", "{B54798B7-C176-4373-86D4-9D7376AD2E17}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,10 +23,6 @@ Global
 		{C772928F-B43F-45A4-8EFA-4D1CD5945559}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C772928F-B43F-45A4-8EFA-4D1CD5945559}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C772928F-B43F-45A4-8EFA-4D1CD5945559}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B54798B7-C176-4373-86D4-9D7376AD2E17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B54798B7-C176-4373-86D4-9D7376AD2E17}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B54798B7-C176-4373-86D4-9D7376AD2E17}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B54798B7-C176-4373-86D4-9D7376AD2E17}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

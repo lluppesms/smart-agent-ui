@@ -2,7 +2,7 @@
 
 namespace ClientApp.Pages;
 
-public sealed partial class Chat : Microsoft.AspNetCore.Components.ComponentBase
+public sealed partial class Chat
 {
     //private const long MaxIndividualFileSize = 1_024L * 1_024;
 

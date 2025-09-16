@@ -1,7 +1,8 @@
 ﻿@inherits LayoutComponentBase
+@namespace ClientApp.Shared
 
-<MudThemeProvider @bind-IsDarkMode="@_isDarkTheme" Theme="_theme" />
-<MudDialogProvider FullWidth="true" MaxWidth="MaxWidth.Small" CloseButton="true" Position="DialogPosition.Center" CloseOnEscapeKey="true" />
+<MudThemeProvider @bind-IsDarkMode="@_isDarkTheme" Theme="_theme"></MudThemeProvider>
+<MudDialogProvider FullWidth="true" MaxWidth="MaxWidth.Small" CloseButton="true" Position="DialogPosition.Center" CloseOnEscapeKey="true"></MudDialogProvider>
 <MudSnackbarProvider />
 <MudPopoverProvider />
 
@@ -30,7 +31,7 @@
             }
             <MudToggleIconButton Toggled="@_isDarkTheme" ToggledChanged=@OnThemeChanged Size="Size.Large"
                                 ToggledSize="Size.Large" Icon=@Icons.Material.Filled.DarkMode Color="@Color.Inherit" ToggledIcon=@Icons.Material.Filled.WbSunny ToggledColor=@Color.Warning />
-           
+
             <LogoutDisplay />
         </MudAppBar>
         <MudDrawer @bind-Open="_drawerOpen" Elevation="20" id="drawer" ClipMode="DrawerClipMode.Always">
@@ -39,7 +40,7 @@
         <MudMainContent>
             <MudContainer MaxWidth="MaxWidth.ExtraLarge" Style="display: flex; flex-direction: column; height: calc(100vh - 115px);" Class="my-6">
                 @Body
-            </MudContainer> 
+            </MudContainer>
         </MudMainContent>
     </MudLayout>
 </MudRTLProvider>

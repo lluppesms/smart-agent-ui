@@ -4,7 +4,7 @@ using static MudBlazor.CategoryTypes;
 
 namespace ClientApp.Components;
 
-public sealed partial class DisclaimerDialog : Microsoft.AspNetCore.Components.ComponentBase
+public sealed partial class DisclaimerDialog
 {
 
     [CascadingParameter] public required IMudDialogInstance Dialog { get; set; }

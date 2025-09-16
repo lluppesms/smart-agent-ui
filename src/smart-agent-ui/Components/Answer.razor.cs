@@ -2,7 +2,7 @@
 
 namespace ClientApp.Components;
 
-public sealed partial class Answer : Microsoft.AspNetCore.Components.ComponentBase
+public sealed partial class Answer
 {
     [Parameter, EditorRequired] public required ApproachResponse Retort { get; set; }
     [Parameter, EditorRequired] public required EventCallback<string> FollowupQuestionClicked { get; set; }

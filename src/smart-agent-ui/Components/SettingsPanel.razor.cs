@@ -2,7 +2,7 @@
 
 namespace ClientApp.Components;
 
-public sealed partial class SettingsPanel : Microsoft.AspNetCore.Components.ComponentBase, IDisposable
+public sealed partial class SettingsPanel : IDisposable
 {
     private bool _open;
     private SupportedSettings _supportedSettings;
