@@ -31,7 +31,11 @@ public sealed partial class SettingsPanel : IDisposable
 
     [Parameter] public EventCallback<bool> OpenChanged { get; set; }
 
-    protected override void OnInitialized() => Nav.LocationChanged += HandleLocationChanged;
+    protected void OnInitialized() 
+    {
+        base.OnInitialized();
+        Nav.LocationChanged += HandleLocationChanged;
+    }
 
     private void HandleLocationChanged(object? sender, LocationChangedEventArgs e)
     {

@@ -20,7 +20,7 @@ public sealed partial class History : IDisposable
     public required ILogger<History> Logger { get; set; }
 
 
-    protected override void OnInitialized()
+    protected void OnInitialized()
     {
         // Instead of awaiting this async enumerable here, let's capture it in a task
         // and start it in the background. This way, we can await it in the UI.

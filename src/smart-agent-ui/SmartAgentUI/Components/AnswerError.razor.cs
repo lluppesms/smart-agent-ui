@@ -2,7 +2,7 @@
 
 namespace ClientApp.Components;
 
-public sealed partial class AnswerError
+public sealed partial class AnswerError : Microsoft.AspNetCore.Components.ComponentBase
 {
     [Parameter, EditorRequired] public required string Question { get; set; }
     [Parameter, EditorRequired] public required ApproachResponse Error { get; set; }

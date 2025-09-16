@@ -4,7 +4,7 @@ using static System.Net.WebRequestMethods;
 
 namespace ClientApp.Shared;
 
-public sealed partial class MainLayout
+public sealed partial class MainLayout : Microsoft.AspNetCore.Components.ComponentBase
 {
     private readonly MudTheme _theme = new()
     {
@@ -21,22 +21,18 @@ public sealed partial class MainLayout
     };
     private bool _drawerOpen = false;
     private bool _settingsOpen = false;
-    private SettingsPanel? _settingsPanel;
+    private SmartAgentUI.Components.SettingsPanel? _settingsPanel;
 
     private bool _isDarkTheme
     {
-        // FAILS get => LocalStorage.GetItem<bool>(StorageKeys.PrefersDarkTheme); // FAILS!
-        // FAILS get => GetLocalBool(StorageKeys.PrefersDarkTheme, false);        // FAILS!
-        get => false; // WORKS
-        set => LocalStorage.SetItem<bool>(StorageKeys.PrefersDarkTheme, value);
+        get => false; // Default to light theme for server rendering
+        set => Task.Run(async () => await SessionStorage.SetItemAsync(StorageKeys.PrefersDarkTheme, value));
     }
 
     private bool _isReversed
     {
-        // FAILS get => LocalStorage.GetItem<bool?>(StorageKeys.PrefersReversedConversationSorting) ?? true; // FAILS!
-        // FAILS get => GetLocalBool(StorageKeys.PrefersReversedConversationSorting, false);                 // FAILS!
-        get => false; // WORKS
-        set => LocalStorage.SetItem<bool>(StorageKeys.PrefersReversedConversationSorting, value);
+        get => false; // Default to false for server rendering
+        set => Task.Run(async () => await SessionStorage.SetItemAsync(StorageKeys.PrefersReversedConversationSorting, value));
     }
 
     // // this also fails... why...???
@@ -61,7 +57,7 @@ public sealed partial class MainLayout
         Thread.CurrentThread.CurrentUICulture is { TextInfo.IsRightToLeft: true };
 
     [Inject] public required NavigationManager Nav { get; set; }
-    [Inject] public required ILocalStorageService LocalStorage { get; set; }
+    [Inject] public required ISessionStorageService SessionStorage { get; set; }
     [Inject] public required IDialogService Dialog { get; set; }
 
     private bool SettingsDisabled => new Uri(Nav.Uri).Segments.LastOrDefault() switch

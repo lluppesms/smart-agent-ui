@@ -12,9 +12,9 @@ public record class VoicePreferences
     private double? _rate;
     private bool? _isEnabled;
 
-    private readonly ILocalStorageService _storage;
+    private readonly ISessionStorageService _storage;
 
-    public VoicePreferences(ILocalStorageService storage) => _storage = storage;
+    public VoicePreferences(ISessionStorageService storage) => _storage = storage;
 
     public string? Voice
     {

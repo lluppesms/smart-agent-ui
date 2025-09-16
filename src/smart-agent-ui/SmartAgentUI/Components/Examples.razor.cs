@@ -2,7 +2,7 @@
 
 namespace ClientApp.Components;
 
-public sealed partial class Examples
+public sealed partial class Examples : Microsoft.AspNetCore.Components.ComponentBase
 {
     [Parameter] public required ProfileSummary Profile { get; set; }
     [Parameter, EditorRequired] public required string Message { get; set; }

@@ -23,7 +23,7 @@ public sealed partial class HistoryV2 : IDisposable
     public required NavigationManager Navigation { get; set; }
 
 
-    protected override void OnInitialized()
+    protected void OnInitialized()
     {
         // Instead of awaiting this async enumerable here, let's capture it in a task
         // and start it in the background. This way, we can await it in the UI.

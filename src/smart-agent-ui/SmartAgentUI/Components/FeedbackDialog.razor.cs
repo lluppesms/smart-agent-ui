@@ -4,7 +4,7 @@ using static MudBlazor.CategoryTypes;
 
 namespace ClientApp.Components;
 
-public sealed partial class FeedbackDialog
+public sealed partial class FeedbackDialog : Microsoft.AspNetCore.Components.ComponentBase
 {
     [Parameter] public required int Rating { get; set; }
     [Parameter] public required string MessageId { get; set; }

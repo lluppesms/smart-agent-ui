@@ -2,7 +2,7 @@
 
 namespace ClientApp.Components;
 
-public sealed partial class SupportingContent
+public sealed partial class SupportingContent : Microsoft.AspNetCore.Components.ComponentBase
 {
     [Parameter, EditorRequired] public required SupportingContentRecord[] DataPoints { get; set; }
 

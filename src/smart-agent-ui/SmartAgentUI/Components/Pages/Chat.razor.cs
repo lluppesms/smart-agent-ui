@@ -2,7 +2,7 @@
 
 namespace ClientApp.Pages;
 
-public sealed partial class Chat
+public sealed partial class Chat : Microsoft.AspNetCore.Components.ComponentBase
 {
     //private const long MaxIndividualFileSize = 1_024L * 1_024;
 
@@ -65,7 +65,7 @@ public sealed partial class Chat
         }
     }
 
-    protected override async Task OnInitializedAsync()
+    protected async Task OnInitializedAsync()
     {
         var user = await ApiClient.GetUserAsync();
         _profiles = user.Profiles.Where(x => x.Approach != ProfileApproach.UserDocumentChat).ToList();
@@ -291,7 +291,7 @@ public sealed partial class Chat
         OnClearChatDocuumentSelection();
     }
 
-    protected override async Task OnAfterRenderAsync(bool firstRender)
+    protected async Task OnAfterRenderAsync(bool firstRender)
     {
         Console.WriteLine($"OnAfterRenderAsync: _isReceivingResponse - {_isReceivingResponse}");
         await JS.InvokeVoidAsync("scrollToBottom", "answerSection");

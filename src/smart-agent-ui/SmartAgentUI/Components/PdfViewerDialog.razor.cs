@@ -2,7 +2,7 @@
 
 namespace ClientApp.Components;
 
-public sealed partial class PdfViewerDialog
+public sealed partial class PdfViewerDialog : Microsoft.AspNetCore.Components.ComponentBase
 {
     private bool _isLoading = true;
     private string _pdfViewerVisibilityStyle => _isLoading ? "display:none;" : "display:default;";
@@ -12,7 +12,7 @@ public sealed partial class PdfViewerDialog
 
     [CascadingParameter] public required IMudDialogInstance Dialog { get; set; }
 
-    protected override async Task OnInitializedAsync()
+    protected async Task OnInitializedAsync()
     {
         await base.OnInitializedAsync();
         await JavaScriptModule.RegisterIFrameLoadedAsync(

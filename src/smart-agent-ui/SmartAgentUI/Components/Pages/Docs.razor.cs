@@ -32,8 +32,9 @@ public sealed partial class Docs : IDisposable
 
     //private bool FilesSelected => _fileUpload is { _files.: > 0 };
 
-    protected override void OnInitialized()
+    protected void OnInitialized()
     {
+        base.OnInitialized();
         // Instead of awaiting this async enumerable here, let's capture it in a task
         // and start it in the background. This way, we can await it in the UI.
         _getDocumentsTask = GetDocumentsAsync();

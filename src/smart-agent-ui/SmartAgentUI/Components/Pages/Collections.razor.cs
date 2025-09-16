@@ -37,8 +37,9 @@ public sealed partial class Collections : IDisposable
     private string _selectedProfile = "";
     private UserSelectionModel? _userSelectionModel = null;
 
-    protected override async Task OnInitializedAsync()
+    protected async Task OnInitializedAsync()
     {
+        await base.OnInitializedAsync();
         var user = await Client.GetUserAsync();
         _profiles = user.Profiles.Where(x => x.SupportsUserSelectionOptions).ToList();
         _selectedProfileSummary = user.Profiles.Where(x => x.SupportsUserSelectionOptions).FirstOrDefault();

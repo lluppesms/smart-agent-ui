@@ -27,10 +27,10 @@ public sealed partial class Settings : IDisposable
     [Inject] public required IJSRuntime JSRuntime { get; set; }
     [Inject] public required HttpClient httpClient { get; set; }
 
-    protected override void OnInitialized()
+    protected void OnInitialized()
     {
     }
-    protected override async Task OnAfterRenderAsync(bool firstRender)
+    protected async Task OnAfterRenderAsync(bool firstRender)
     {
         await base.OnAfterRenderAsync(firstRender);
         if (firstRender)

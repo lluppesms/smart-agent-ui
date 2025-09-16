@@ -41,6 +41,8 @@ builder.Services.AddScoped<ApiClient>();
 // Add session storage for Blazor Server (replaces WebAssembly localStorage)
 builder.Services.AddDistributedMemoryCache();
 builder.Services.AddSession();
+builder.Services.AddScoped<ISessionStorageService, SessionStorageService>();
+builder.Services.AddScoped<VoicePreferences>();
 
 // bind configuration
 builder.Services.AddOptions<AppConfiguration>()

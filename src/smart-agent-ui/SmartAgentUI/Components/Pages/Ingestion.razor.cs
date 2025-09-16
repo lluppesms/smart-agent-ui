@@ -2,7 +2,7 @@
 
 namespace ClientApp.Pages;
 
-public sealed partial class Ingestion
+public sealed partial class Ingestion : Microsoft.AspNetCore.Components.ComponentBase
 {
     [Inject]
     public required ApiClient Client { get; set; }
@@ -10,7 +10,7 @@ public sealed partial class Ingestion
     private string _indexName = string.Empty;
 
 
-    protected override void OnInitialized()
+    protected void OnInitialized()
     {
     }
 

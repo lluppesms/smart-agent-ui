@@ -2,7 +2,7 @@
 
 namespace ClientApp.Components;
 
-public sealed partial class Question
+public sealed partial class Question : Microsoft.AspNetCore.Components.ComponentBase
 {
     private static readonly MarkdownPipeline s_pipeline = new MarkdownPipelineBuilder()
         .UsePipeTables()
