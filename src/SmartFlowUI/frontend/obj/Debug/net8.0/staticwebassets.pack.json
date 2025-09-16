@@ -1,0 +1,69 @@
+{
+  "Files": [
+    {
+      "Id": "/home/runner/work/smart-agent-ui/smart-agent-ui/src/SmartFlowUI/frontend/bin/Debug/net8.0/wwwroot/_framework/blazor.webassembly.js",
+      "PackagePath": "staticwebassets/_framework/blazor.webassembly.js"
+    },
+    {
+      "Id": "/home/runner/work/smart-agent-ui/smart-agent-ui/src/SmartFlowUI/frontend/obj/Debug/net8.0/compressed/d126fr3x2a.gz",
+      "PackagePath": "staticwebassets/_framework/blazor.webassembly.js.gz"
+    },
+    {
+      "Id": "/home/runner/work/smart-agent-ui/smart-agent-ui/src/SmartFlowUI/frontend/wwwroot/app_icon.pdn",
+      "PackagePath": "staticwebassets/app_icon.pdn"
+    },
+    {
+      "Id": "/home/runner/work/smart-agent-ui/smart-agent-ui/src/SmartFlowUI/frontend/wwwroot/css/app.css",
+      "PackagePath": "staticwebassets/css/app.css"
+    },
+    {
+      "Id": "/home/runner/work/smart-agent-ui/smart-agent-ui/src/SmartFlowUI/frontend/wwwroot/icon-192.png",
+      "PackagePath": "staticwebassets/icon-192.png"
+    },
+    {
+      "Id": "/home/runner/work/smart-agent-ui/smart-agent-ui/src/SmartFlowUI/frontend/wwwroot/icon-512.png",
+      "PackagePath": "staticwebassets/icon-512.png"
+    },
+    {
+      "Id": "/home/runner/work/smart-agent-ui/smart-agent-ui/src/SmartFlowUI/frontend/wwwroot/index.html",
+      "PackagePath": "staticwebassets/index.html"
+    },
+    {
+      "Id": "/home/runner/work/smart-agent-ui/smart-agent-ui/src/SmartFlowUI/frontend/wwwroot/js/iframe.js",
+      "PackagePath": "staticwebassets/js/iframe.js"
+    },
+    {
+      "Id": "/home/runner/work/smart-agent-ui/smart-agent-ui/src/SmartFlowUI/frontend/wwwroot/js/waitForElement.js",
+      "PackagePath": "staticwebassets/js/waitForElement.js"
+    },
+    {
+      "Id": "/home/runner/work/smart-agent-ui/smart-agent-ui/src/SmartFlowUI/frontend/wwwroot/manifest.json",
+      "PackagePath": "staticwebassets/manifest.json"
+    },
+    {
+      "Id": "/home/runner/work/smart-agent-ui/smart-agent-ui/src/SmartFlowUI/frontend/wwwroot/staticwebapp.config.json",
+      "PackagePath": "staticwebassets/staticwebapp.config.json"
+    },
+    {
+      "Id": "/home/runner/work/smart-agent-ui/smart-agent-ui/src/SmartFlowUI/frontend/wwwroot/white-icon.png",
+      "PackagePath": "staticwebassets/white-icon.png"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.ClientApp.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.build.ClientApp.props",
+      "PackagePath": "build\\ClientApp.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.ClientApp.props",
+      "PackagePath": "buildMultiTargeting\\ClientApp.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.ClientApp.props",
+      "PackagePath": "buildTransitive\\ClientApp.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
