@@ -414,6 +414,14 @@ src/SmartFlowUI/frontend/bin/
 src/SmartFlowUI/shared/obj/
 src/SmartFlowUI/shared/bin/
 
+src/smart-agent-ui/appsettings.Development.json
+src/smart-agent-ui/SmartAgentUI/wwwroot/appsettings.development.json
+src/smart-agent-ui/SmartAgentUI/wwwroot/appsettings.json
+src/smart-agent-ui/SmartAgentUI/backend/appsettings.Development-v1.json
+src/smart-agent-ui/SmartAgentUI/backend/Properties/launchSettings.json
+src/smart-agent-ui/SmartAgentUI/backend/obj/
+src/smart-agent-ui/SmartAgentUI/backend/bin/
+
 infra/bicep/*.parameters.json
 !infra/bicep/main.parameters.json
 .vscode/settings.json
