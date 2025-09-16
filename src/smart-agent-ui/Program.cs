@@ -52,16 +52,17 @@ builder.Services.AddOptions<AppConfiguration>()
 var appConfiguration = new AppConfiguration();
 builder.Configuration.Bind(appConfiguration);
 
+// Temporarily comment out Azure services to test basic setup
 // Add Azure services to the container.
-if (appConfiguration.UseManagedIdentityResourceAccess)
-    builder.Services.AddAzureWithMICredentialsServices(appConfiguration);
-else
-    builder.Services.AddAzureServices(appConfiguration);
+//if (appConfiguration.UseManagedIdentityResourceAccess)
+//    builder.Services.AddAzureWithMICredentialsServices(appConfiguration);
+//else
+//    builder.Services.AddAzureServices(appConfiguration);
 
 builder.Services.AddAntiforgery(options => { options.HeaderName = "X-CSRF-TOKEN-HEADER"; options.FormFieldName = "X-CSRF-TOKEN-FORM"; });
 
 builder.Services.AddSingleton<AppConfiguration>();
-builder.Services.AddSingleton<ProfileService>();
+//builder.Services.AddSingleton<ProfileService>();
 
 // Frontend services
 builder.Services.AddScoped<ApiClient>();
@@ -97,7 +98,7 @@ else
     }
 }
 
-builder.Services.AddCustomHealthChecks();
+//builder.Services.AddCustomHealthChecks();
 
 var app = builder.Build();
 
@@ -123,12 +124,7 @@ app.UseStaticFiles();
 app.UseCors();
 app.UseAntiforgery();
 
-// Configure Blazor Server
-app.MapRazorPages();
-app.MapBlazorHub();
-app.MapFallbackToPage("/_Host");
-
-// Configure API endpoints
+// Configure API endpoints first
 app.MapControllers();
 
 app.Use(next => context =>
@@ -139,10 +135,16 @@ app.Use(next => context =>
     return next(context);
 });
 
-app.MapAgentManagementApi();
-app.MapChatApi();
-app.MapApi();
+// Temporarily comment out API mappings that depend on Azure services
+//app.MapAgentManagementApi();
+//app.MapChatApi();
+//app.MapApi();
 
-app.MapCustomHealthChecks();
+//app.MapCustomHealthChecks();
+
+// Configure Blazor Server
+app.MapRazorPages();
+app.MapBlazorHub();
+app.MapFallbackToPage("/_Host");
 
 app.Run();
