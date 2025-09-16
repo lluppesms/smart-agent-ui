@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SmartAgentUI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a5f151ce586ab2f12f19f3d5ac7438ff020418a5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+403af84674a7a8d775a00a57a7d54f9375c8e017")]
 [assembly: System.Reflection.AssemblyProductAttribute("SmartAgentUI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SmartAgentUI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -128,7 +128,7 @@ app.UseCors();
 app.UseSession();
 app.UseAntiforgery();
 
-app.MapRazorComponents<App>()
+app.MapRazorComponents<SimpleApp>()
     .AddInteractiveServerRenderMode();
 
 app.MapRazorPages();

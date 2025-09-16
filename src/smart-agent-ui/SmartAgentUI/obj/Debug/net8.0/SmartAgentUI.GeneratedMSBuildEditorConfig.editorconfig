@@ -133,6 +133,18 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9TZXR0aW5nc1BhbmVsLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[/home/runner/work/smart-agent-ui/smart-agent-ui/src/smart-agent-ui/SmartAgentUI/Components/SimpleApp.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9TaW1wbGVBcHAucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/runner/work/smart-agent-ui/smart-agent-ui/src/smart-agent-ui/SmartAgentUI/Components/SimpleLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9TaW1wbGVMYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/runner/work/smart-agent-ui/smart-agent-ui/src/smart-agent-ui/SmartAgentUI/Components/SimpleRoutes.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9TaW1wbGVSb3V0ZXMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
 [/home/runner/work/smart-agent-ui/smart-agent-ui/src/smart-agent-ui/SmartAgentUI/Components/SupportingContent.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9TdXBwb3J0aW5nQ29udGVudC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
