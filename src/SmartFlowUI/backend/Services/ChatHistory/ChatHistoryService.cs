@@ -16,8 +16,36 @@ public class ChatHistoryService : IChatHistoryService
     {
         _cosmosClient = cosmosClient;
 
-        var db = _cosmosClient.GetDatabase(DefaultSettings.CosmosDbDatabaseName);
-        _cosmosContainer = db.GetContainer(DefaultSettings.CosmosDbCollectionName);
+        // Create database if it doesn't exist
+        try
+        {
+            var db = _cosmosClient.CreateDatabaseIfNotExistsAsync(DefaultSettings.CosmosDbDatabaseName).GetAwaiter().GetResult();
+            // Create get container if it doesn't exist
+            _cosmosContainer = db.Database.CreateContainerIfNotExistsAsync(DefaultSettings.CosmosDbCollectionName, "/userId").GetAwaiter().GetResult();
+        }
+        catch (CosmosException ex)
+        {
+            if (ex.StatusCode == HttpStatusCode.Forbidden && ex.Message.Contains("firewall settings", StringComparison.InvariantCultureIgnoreCase))
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine($"==> Connection to Cosmos {_cosmosClient.Endpoint.Host} failed because of a misconfigured firewall setting!");
+                // Message might contain this...: "code":"Forbidden","message":"Request originated from IP x.x.188.38 through public internet. This is blocked by your Cosmos DB account firewall settings. More info: https:...
+                var startLoc = ex.Message.IndexOf("\"code\":\"Forbidden\",\"message\":\"", StringComparison.InvariantCultureIgnoreCase);
+                var endLoc = ex.Message.IndexOf("More info:", startLoc + 30, StringComparison.InvariantCultureIgnoreCase);
+                if (startLoc > 0 && endLoc > 0)
+                {
+                    var ipMessage = ex.Message.Substring(startLoc + 30, endLoc - startLoc - 30);
+                    Console.WriteLine($"==> {ipMessage}");
+                }
+                Console.ResetColor();
+            }
+            //throw;
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"*** Connection to Cosmos failed: {ex.Message}");
+            throw;
+        }
     }
 
     public async Task RecordChatMessageAsync(UserInformation user, ChatRequest chatRequest, ApproachResponse response)
