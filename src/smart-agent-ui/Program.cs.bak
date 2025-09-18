@@ -1,0 +1,68 @@
+﻿// Copyright (c) Microsoft. All rights reserved.
+
+using SmartAgentUI;
+using Microsoft.AspNetCore.DataProtection;
+
+Console.WriteLine("Starting SmartAgentUI - Simplified Version...");
+
+var builder = WebApplication.CreateBuilder(args);
+builder.Configuration.AddJsonFile("appsettings.local.json", optional: true, reloadOnChange: true);
+
+// Add services to the container.
+builder.Services.AddRazorPages();
+builder.Services.AddServerSideBlazor();
+builder.Services.AddHttpContextAccessor();
+
+// Add MudBlazor services
+builder.Services.AddMudServices();
+
+// Add HttpClient
+builder.Services.AddHttpClient();
+
+// For Server-side Blazor, use session storage instead of local storage
+builder.Services.AddDistributedMemoryCache();
+builder.Services.AddSession();
+
+// bind configuration - simplified version
+var appConfiguration = new AppConfiguration();
+builder.Configuration.Bind(appConfiguration);
+
+// Add Azure services with enhanced error handling
+try
+{
+    Console.WriteLine("Adding basic Azure services...");
+    builder.Services.AddSingleton<AppConfiguration>(appConfiguration);
+    Console.WriteLine("Azure services added successfully.");
+}
+catch (Exception ex)
+{
+    Console.WriteLine($"WARNING: Failed to configure Azure services: {ex.Message}");
+    Console.WriteLine("Application will start without Azure services.");
+}
+
+// Load client-side configuration settings
+SmartAgentUIConfiguration.Load(builder.Configuration);
+
+var app = builder.Build();
+
+if (app.Environment.IsDevelopment())
+{
+    app.UseDeveloperExceptionPage();
+}
+else
+{
+    app.UseExceptionHandler("/Error");
+    app.UseHsts();
+}
+
+app.UseHttpsRedirection();
+app.UseRouting();
+app.UseStaticFiles();
+app.UseSession();
+
+app.MapRazorPages();
+app.MapBlazorHub();
+app.MapFallbackToPage("/_Host");
+
+Console.WriteLine("SmartAgentUI started successfully!");
+app.Run();

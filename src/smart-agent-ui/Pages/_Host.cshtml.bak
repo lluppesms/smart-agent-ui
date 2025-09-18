@@ -1,0 +1,8 @@
+@page
+@namespace SmartAgentUI.Pages
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    Layout = "_Layout-Simple";
+}
+
+<component type="typeof(App)" render-mode="ServerPrerendered" />
