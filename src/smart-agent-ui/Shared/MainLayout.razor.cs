@@ -7,7 +7,7 @@ namespace SmartAgentUI.Shared.Shared;
 
 public sealed partial class MainLayout
 {
-    private readonly MudTheme _theme = new()
+    public readonly MudTheme _theme = new()
     {
         PaletteLight = new PaletteLight
         {
@@ -24,20 +24,43 @@ public sealed partial class MainLayout
     private bool _settingsOpen = false;
     private SettingsPanel? _settingsPanel;
 
-    private bool _isDarkTheme
+    public bool _isDarkTheme
     {
-        // FAILS get => LocalStorage.GetItem<bool>(StorageKeys.PrefersDarkTheme); // FAILS!
-        // FAILS get => GetLocalBool(StorageKeys.PrefersDarkTheme, false);        // FAILS!
-        get => false; // WORKS
-        set => LocalStorage.SetItem<bool>(StorageKeys.PrefersDarkTheme, value);
+        // Server-side session storage replacement for client-side local storage
+        get 
+        {
+            var session = HttpContextAccessor.HttpContext?.Session;
+            if (session != null)
+            {
+                var value = session.GetString(StorageKeys.PrefersDarkTheme);
+                return bool.TryParse(value, out var result) && result;
+            }
+            return false;
+        }
+        set 
+        {
+            var session = HttpContextAccessor.HttpContext?.Session;
+            session?.SetString(StorageKeys.PrefersDarkTheme, value.ToString());
+        }
     }
 
-    private bool _isReversed
+    public bool _isReversed
     {
-        // FAILS get => LocalStorage.GetItem<bool?>(StorageKeys.PrefersReversedConversationSorting) ?? true; // FAILS!
-        // FAILS get => GetLocalBool(StorageKeys.PrefersReversedConversationSorting, false);                 // FAILS!
-        get => false; // WORKS
-        set => LocalStorage.SetItem<bool>(StorageKeys.PrefersReversedConversationSorting, value);
+        get 
+        {
+            var session = HttpContextAccessor.HttpContext?.Session;
+            if (session != null)
+            {
+                var value = session.GetString(StorageKeys.PrefersReversedConversationSorting);
+                return bool.TryParse(value, out var result) ? result : true;
+            }
+            return true;
+        }
+        set 
+        {
+            var session = HttpContextAccessor.HttpContext?.Session;
+            session?.SetString(StorageKeys.PrefersReversedConversationSorting, value.ToString());
+        }
     }
 
     // // this also fails... why...???
@@ -58,11 +81,11 @@ public sealed partial class MainLayout
     //     }
     // }
 
-    private bool _isRightToLeft =>
+    public bool _isRightToLeft =>
         Thread.CurrentThread.CurrentUICulture is { TextInfo.IsRightToLeft: true };
 
     [Inject] public required NavigationManager Nav { get; set; }
-    [Inject] public required ILocalStorageService LocalStorage { get; set; }
+    [Inject] public required IHttpContextAccessor HttpContextAccessor { get; set; }
     [Inject] public required IDialogService Dialog { get; set; }
 
     private bool SettingsDisabled => new Uri(Nav.Uri).Segments.LastOrDefault() switch
@@ -71,7 +94,7 @@ public sealed partial class MainLayout
         _ => true
     };
 
-    private string LogoImagePath
+    public string LogoImagePath
     {
         get
         {
@@ -87,7 +110,7 @@ public sealed partial class MainLayout
         }
     }
 
-    private bool SortDisabled
+    public bool SortDisabled
     {
         get
         {
@@ -100,7 +123,7 @@ public sealed partial class MainLayout
         }
     }
 
-    private void OnMenuClicked() => _drawerOpen = !_drawerOpen;
+    public void OnMenuClicked() => _drawerOpen = !_drawerOpen;
 
     private void OnThemeChanged() => _isDarkTheme = !_isDarkTheme;
 

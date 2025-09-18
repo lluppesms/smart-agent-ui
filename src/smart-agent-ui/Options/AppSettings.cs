@@ -1,6 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 
-namespace ClientApp.Options;
+namespace SmartAgentUI.Options;
 
 public class AppSettings
 {
