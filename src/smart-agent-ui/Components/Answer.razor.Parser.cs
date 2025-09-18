@@ -3,7 +3,7 @@
 using Markdig;
 using MudBlazor;
 
-namespace SmartAgentUI.Components.Components;
+namespace SmartAgentUI.Components;
 
 public sealed partial class Answer
 {

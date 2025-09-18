@@ -1,12 +1,12 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 
-namespace SmartAgentUI.Components.Components;
+namespace SmartAgentUI.Components;
 
 public sealed partial class Answer
 {
     [Parameter, EditorRequired] public required ApproachResponse Retort { get; set; }
     [Parameter, EditorRequired] public required EventCallback<string> FollowupQuestionClicked { get; set; }
- 
+
 
     [Inject] public required IDialogService Dialog { get; set; }
 

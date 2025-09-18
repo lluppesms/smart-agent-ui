@@ -1,7 +1,7 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 
-using MinimalApi.Services.Documents;
-using SmartAgentUI.Models.Models;
+using SmartAgentUI.Services.Documents;
+using SmartAgentUI.Models;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace SmartAgentUI.Pages.Pages;

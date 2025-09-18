@@ -111,7 +111,7 @@ builder.Services.AddScoped<SmartAgentUI.Services.ApiClient>();
 builder.Services.AddScoped<VoicePreferences>();
 
 // Load client-side configuration settings
-ClientAppConfiguration.Load(builder.Configuration);
+SmartAgentUIConfiguration.Load(builder.Configuration);
 
 if (builder.Environment.IsDevelopment())
 {

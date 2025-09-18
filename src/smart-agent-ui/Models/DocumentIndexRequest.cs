@@ -3,7 +3,7 @@
 using Newtonsoft.Json;
 using SmartAgentUI.Models;
 
-namespace MinimalApi.Services.Documents;
+namespace SmartAgentUI.Services.Documents;
 
 public class DocumentIndexRequest
 {

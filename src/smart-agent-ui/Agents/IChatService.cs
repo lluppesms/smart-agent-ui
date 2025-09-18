@@ -2,7 +2,7 @@
 
 using SmartAgentUI.Services.Profile;
 
-namespace MinimalApi.Agents;
+namespace SmartAgentUI.Agents;
 
 public interface IChatService
 {

@@ -2,7 +2,7 @@
 
 using SmartAgentUI.Models;
 
-namespace SmartAgentUI.Components.Components;
+namespace SmartAgentUI.Components;
 
 public sealed partial class TextInputV3
 {

@@ -1,6 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 
-namespace ClientApp;
+namespace SmartAgentUI;
 
 public static class Cache
 {

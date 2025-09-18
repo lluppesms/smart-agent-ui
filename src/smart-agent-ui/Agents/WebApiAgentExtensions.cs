@@ -1,11 +1,11 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
-using MinimalApi.Agents;
-using MinimalApi.Models;
+using SmartAgentUI.Agents;
+using SmartAgentUI.Models;
 using Azure;
 using Azure.Identity;
 using Microsoft.SemanticKernel.Agents.AzureAI;
 
-namespace MinimalApi.Extensions;
+namespace SmartAgentUI.Extensions;
 
 internal static class WebApiAgentExtensions
 {

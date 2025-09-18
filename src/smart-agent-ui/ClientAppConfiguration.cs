@@ -4,7 +4,7 @@ using Microsoft.Extensions.Configuration;
 
 namespace SmartAgentUI;
 
-public static class ClientAppConfiguration
+public static class SmartAgentUIConfiguration
 {
     public static void Load(IConfiguration config)
     {

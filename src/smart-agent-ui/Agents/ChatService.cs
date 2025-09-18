@@ -3,7 +3,7 @@
 using Microsoft.SemanticKernel.ChatCompletion;
 using SmartAgentUI.Services.Profile.Prompts;
 
-namespace MinimalApi.Agents;
+namespace SmartAgentUI.Agents;
 
 internal sealed class ChatService : IChatService
 {

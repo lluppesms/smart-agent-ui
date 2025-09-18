@@ -1,6 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 
-using MinimalApi.Services.Documents;
+using SmartAgentUI.Services.Documents;
 
 namespace SmartAgentUI.Services.ChatHistory;
 public interface IDocumentService

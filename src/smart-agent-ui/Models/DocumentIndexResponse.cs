@@ -2,7 +2,7 @@
 
 using Newtonsoft.Json;
 
-namespace MinimalApi.Services.Documents;
+namespace SmartAgentUI.Services.Documents;
 
 public class DocumentIndexResponse
 {

@@ -1,7 +1,7 @@
 ﻿using System.Text;
 using Microsoft.SemanticKernel.ChatCompletion;
 
-namespace MinimalApi.Agents;
+namespace SmartAgentUI.Agents;
 
 public static class ChatHistoryExtensions
 {

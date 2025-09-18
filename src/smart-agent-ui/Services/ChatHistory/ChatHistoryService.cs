@@ -2,7 +2,7 @@
 
 using Microsoft.Azure.Cosmos;
 using Microsoft.Identity.Client;
-using SmartAgentUI.Models.Models;
+using SmartAgentUI.Models;
 
 namespace SmartAgentUI.Services.ChatHistory;
 

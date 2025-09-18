@@ -1,5 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 
+using SmartAgentUI.Components;
 using static System.Net.WebRequestMethods;
 
 namespace SmartAgentUI.Shared.Shared;

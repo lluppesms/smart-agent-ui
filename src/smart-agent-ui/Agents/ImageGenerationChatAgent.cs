@@ -7,9 +7,9 @@ using SmartAgentUI.Services.Profile.Prompts;
 using System.Runtime.CompilerServices; // Required for EnumeratorCancellation
 using System.Text.RegularExpressions; // Required for Regex
 using System.Text;
-using SmartAgentUI.Models.Models;
+using SmartAgentUI.Models;
 
-namespace MinimalApi.Agents;
+namespace SmartAgentUI.Agents;
 
 #pragma warning disable SKEXP0001
 internal sealed class ImageGenerationChatAgent : IChatService
@@ -71,20 +71,20 @@ internal sealed class ImageGenerationChatAgent : IChatService
     private string? TryExtractPreviousImageUrl(ChatRequest request)
     {
         var history = request.History;
-        
+
         // Check for uploaded images on the first chat turn (when history is empty or only contains the current turn)
-        bool isFirstChatTurn = history == null || history.Length == 0 || 
+        bool isFirstChatTurn = history == null || history.Length == 0 ||
                               (history.Length == 1 && string.IsNullOrEmpty(history[0].Assistant));
-        
+
         if (isFirstChatTurn && request.FileUploads?.Any() == true)
         {
             // Look for the first image file upload
-            var imageUpload = request.FileUploads.FirstOrDefault(file => 
+            var imageUpload = request.FileUploads.FirstOrDefault(file =>
                 file.ContentType?.StartsWith("image/", StringComparison.OrdinalIgnoreCase) == true);
-            
+
             if (imageUpload != null)
             {
-                _logger.LogInformation("Found uploaded image for first chat turn: {FileName} with content type: {ContentType}", 
+                _logger.LogInformation("Found uploaded image for first chat turn: {FileName} with content type: {ContentType}",
                     imageUpload.FileName, imageUpload.ContentType);
                 return imageUpload.DataUrl;
             }

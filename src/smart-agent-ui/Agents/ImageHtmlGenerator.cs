@@ -1,6 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 
-namespace MinimalApi.Agents;
+namespace SmartAgentUI.Agents;
 
 /// <summary>
 /// Utility class for generating enhanced HTML for image display with download functionality

@@ -1,6 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 
-namespace SmartAgentUI.Components.Components;
+namespace SmartAgentUI.Components;
 
 public sealed partial class Question
 {

@@ -1,6 +1,6 @@
 {
-  "name": "ClientApp",
-  "short_name": "ClientApp",
+  "name": "SmartAgentUI",
+  "short_name": "SmartAgentUI",
   "start_url": "./",
   "display": "standalone",
   "background_color": "#ffffff",

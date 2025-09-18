@@ -4,7 +4,7 @@ using System.Xml.Xsl;
 using SmartAgentUI.Models;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
-namespace SmartAgentUI.Components.Components;
+namespace SmartAgentUI.Components;
 
 public sealed partial class TextInputV4
 {

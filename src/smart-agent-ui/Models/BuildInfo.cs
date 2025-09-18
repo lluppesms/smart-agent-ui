@@ -2,7 +2,7 @@
 
 using Newtonsoft.Json;
 
-namespace ClientApp.Models;
+namespace SmartAgentUI.Models;
 
 /// <summary>
 /// Build Info

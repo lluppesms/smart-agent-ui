@@ -1,7 +1,5 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 
-using SmartAgentUI.Models.Json;
-
 namespace SmartAgentUI.Services.ChatHistory;
 
 public class DocumentService : IDocumentService

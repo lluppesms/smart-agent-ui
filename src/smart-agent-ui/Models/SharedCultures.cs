@@ -1,6 +1,7 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 
-namespace ClientApp.Models;
+
+namespace SmartAgentUI.Models;
 
 public record class SharedCultures
 {

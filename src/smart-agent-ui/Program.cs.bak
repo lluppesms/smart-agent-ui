@@ -41,7 +41,7 @@ catch (Exception ex)
 }
 
 // Load client-side configuration settings
-ClientAppConfiguration.Load(builder.Configuration);
+SmartAgentUIConfiguration.Load(builder.Configuration);
 
 var app = builder.Build();
 

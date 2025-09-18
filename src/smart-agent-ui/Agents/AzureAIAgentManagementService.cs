@@ -5,7 +5,7 @@ using Microsoft.SemanticKernel;
 using Microsoft.SemanticKernel.Agents.AzureAI;
 using System.Reflection;
 
-namespace MinimalApi.Agents
+namespace SmartAgentUI.Agents
 {        
     #pragma warning disable SKEXP0110
     public class AzureAIAgentManagementService
@@ -37,7 +37,7 @@ namespace MinimalApi.Agents
             var definition = await agentsClient.Administration.CreateAgentAsync(
                 "gpt-4o",
                 name: "rutzsco-chat-agent",
-                instructions: LoadEmbeddedResource("MinimalApi.Services.Profile.Prompts.RAGChatSystemPrompt.txt"),
+                instructions: LoadEmbeddedResource("SmartAgentUI.Services.Profile.Prompts.RAGChatSystemPrompt.txt"),
                 tools: tools);
 
             AzureAIAgent agent = new(definition, agentsClient, plugins: kernel.Plugins);

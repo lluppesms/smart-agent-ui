@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace MinimalApi.Models
+namespace SmartAgentUI.Models
 {
     public class AgentViewModel
     {

@@ -2,7 +2,7 @@
 
 using static MudBlazor.CategoryTypes;
 
-namespace SmartAgentUI.Components.Components;
+namespace SmartAgentUI.Components;
 
 public sealed partial class DisclaimerDialog
 {

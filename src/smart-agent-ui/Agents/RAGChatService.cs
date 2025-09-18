@@ -4,7 +4,7 @@ using Microsoft.SemanticKernel.ChatCompletion;
 using Microsoft.SemanticKernel.Connectors.OpenAI;
 using SmartAgentUI.Services.Profile.Prompts;
 
-namespace MinimalApi.Agents;
+namespace SmartAgentUI.Agents;
 
 internal sealed class RAGChatService : IChatService
 {

@@ -6,7 +6,7 @@ using Microsoft.SemanticKernel.Agents;
 using Microsoft.SemanticKernel.Agents.AzureAI;
 using Microsoft.SemanticKernel.ChatCompletion;
 
-namespace MinimalApi.Agents;
+namespace SmartAgentUI.Agents;
 
 #pragma warning disable SKEXP0110
 public class AzureAIAgentChatService : IChatService
