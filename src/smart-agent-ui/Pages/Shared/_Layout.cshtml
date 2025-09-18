@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Smart Agent UI</title>
     <base href="~/" />
+    <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet" />
     <link href="css/app.css" rel="stylesheet" />
-    <link href="_content/MudBlazor/MudBlazor.min.css" rel="stylesheet" />
+    <link href="SmartAgentUI.styles.css" rel="stylesheet" />
     <link rel="icon" type="image/png" href="icon-192.png" />
+    <link href="_content/MudBlazor/MudBlazor.min.css" rel="stylesheet" />
 </head>
-
 <body>
-    <component type="typeof(App)" render-mode="ServerPrerendered" />
+    @RenderBody()
 
     <div id="blazor-error-ui">
         <environment include="Staging,Production">
@@ -25,8 +25,8 @@
         <a class="dismiss">🗙</a>
     </div>
 
+    <script src="js/iframe.js"></script>
     <script src="_framework/blazor.server.js"></script>
     <script src="_content/MudBlazor/MudBlazor.min.js"></script>
 </body>
-
 </html>
