@@ -2,7 +2,7 @@
 
 using static MudBlazor.Colors;
 using System;
-namespace SmartAgentUI.Pages.Pages;
+namespace SmartAgentUI.Pages;
 
 public sealed partial class HistoryV2 : IDisposable
 {

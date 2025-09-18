@@ -4,7 +4,7 @@ using SmartAgentUI.Services.Documents;
 using SmartAgentUI.Models;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
-namespace SmartAgentUI.Pages.Pages;
+namespace SmartAgentUI.Pages;
 
 public sealed partial class Collections : IDisposable
 {

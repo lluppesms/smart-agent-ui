@@ -4,7 +4,7 @@ using System.Reflection;
 using System.Xml.Linq;
 using Newtonsoft.Json;
 
-namespace SmartAgentUI.Pages.Pages;
+namespace SmartAgentUI.Pages;
 
 public sealed partial class Settings : IDisposable
 {

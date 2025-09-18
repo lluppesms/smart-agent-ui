@@ -1,6 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 
-namespace SmartAgentUI.Pages.Pages;
+namespace SmartAgentUI.Pages;
 
 public sealed partial class History : IDisposable
 {
