@@ -177,10 +177,10 @@ app.Use(next => context =>
     return next(context);
 });
 
-// Map API endpoints (commented out until agents are restored)
-// app.MapAgentManagementApi();
-// app.MapChatApi();
-// app.MapApi();
+// Map API endpoints 
+app.MapAgentManagementApi();
+app.MapChatApi();
+app.MapApi();
 
 app.MapCustomHealthChecks();
 

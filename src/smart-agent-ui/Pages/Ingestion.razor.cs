@@ -1,6 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 
-namespace ClientApp.Pages;
+namespace SmartAgentUI.Pages.Pages;
 
 public sealed partial class Ingestion
 {
