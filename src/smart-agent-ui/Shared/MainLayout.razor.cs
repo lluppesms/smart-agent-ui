@@ -26,21 +26,28 @@ public sealed partial class MainLayout
 
     public bool _isDarkTheme
     {
-        // Server-side session storage replacement for client-side local storage
+        // Client-side local storage for Blazor WebAssembly
         get 
         {
-            var session = HttpContextAccessor.HttpContext?.Session;
-            if (session != null)
+            try
             {
-                var value = session.GetString(StorageKeys.PrefersDarkTheme);
-                return bool.TryParse(value, out var result) && result;
+                return LocalStorage.GetItem<bool>(StorageKeys.PrefersDarkTheme);
             }
-            return false;
+            catch
+            {
+                return false;
+            }
         }
         set 
         {
-            var session = HttpContextAccessor.HttpContext?.Session;
-            session?.SetString(StorageKeys.PrefersDarkTheme, value.ToString());
+            try
+            {
+                LocalStorage.SetItem(StorageKeys.PrefersDarkTheme, value);
+            }
+            catch
+            {
+                // Handle storage errors gracefully
+            }
         }
     }
 
@@ -48,18 +55,25 @@ public sealed partial class MainLayout
     {
         get 
         {
-            var session = HttpContextAccessor.HttpContext?.Session;
-            if (session != null)
+            try
             {
-                var value = session.GetString(StorageKeys.PrefersReversedConversationSorting);
-                return bool.TryParse(value, out var result) ? result : true;
+                return LocalStorage.GetItem<bool?>(StorageKeys.PrefersReversedConversationSorting) ?? true;
             }
-            return true;
+            catch
+            {
+                return true;
+            }
         }
         set 
         {
-            var session = HttpContextAccessor.HttpContext?.Session;
-            session?.SetString(StorageKeys.PrefersReversedConversationSorting, value.ToString());
+            try
+            {
+                LocalStorage.SetItem(StorageKeys.PrefersReversedConversationSorting, value);
+            }
+            catch
+            {
+                // Handle storage errors gracefully
+            }
         }
     }
 
@@ -85,7 +99,7 @@ public sealed partial class MainLayout
         Thread.CurrentThread.CurrentUICulture is { TextInfo.IsRightToLeft: true };
 
     [Inject] public required NavigationManager Nav { get; set; }
-    [Inject] public required IHttpContextAccessor HttpContextAccessor { get; set; }
+    [Inject] public required ILocalStorageService LocalStorage { get; set; }
     [Inject] public required IDialogService Dialog { get; set; }
 
     public bool SettingsDisabled => new Uri(Nav.Uri).Segments.LastOrDefault() switch

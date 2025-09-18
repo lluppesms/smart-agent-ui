@@ -12,19 +12,40 @@ public record class VoicePreferences
     private double? _rate;
     private bool? _isEnabled;
 
-    private readonly IHttpContextAccessor _contextAccessor;
+    private readonly ILocalStorageService _localStorage;
 
-    public VoicePreferences(IHttpContextAccessor contextAccessor) => _contextAccessor = contextAccessor;
+    public VoicePreferences(ILocalStorageService localStorage) => _localStorage = localStorage;
 
     public string? Voice
     {
-        get => _voice ??= _contextAccessor.HttpContext?.Session.GetString(PreferredVoiceKey);
+        get
+        {
+            if (_voice == null)
+            {
+                try
+                {
+                    _voice = _localStorage.GetItem<string?>(PreferredVoiceKey);
+                }
+                catch
+                {
+                    _voice = null;
+                }
+            }
+            return _voice;
+        }
         set
         {
             if (_voice != value && value is not null)
             {
                 _voice = value;
-                _contextAccessor.HttpContext?.Session.SetString(PreferredVoiceKey, value);
+                try
+                {
+                    _localStorage.SetItem(PreferredVoiceKey, value);
+                }
+                catch
+                {
+                    // Handle storage errors gracefully
+                }
             }
         }
     }
@@ -35,8 +56,15 @@ public record class VoicePreferences
         {
             if (_rate.HasValue) return _rate.Value;
             
-            var rateStr = _contextAccessor.HttpContext?.Session.GetString(PreferredSpeedKey);
-            _rate = double.TryParse(rateStr, out var rate) && rate > 0 ? rate : 1;
+            try
+            {
+                var rate = _localStorage.GetItem<double?>(PreferredSpeedKey);
+                _rate = rate > 0 ? rate : 1;
+            }
+            catch
+            {
+                _rate = 1;
+            }
             return _rate.Value;
         }
         set
@@ -44,7 +72,14 @@ public record class VoicePreferences
             if (_rate != value)
             {
                 _rate = value;
-                _contextAccessor.HttpContext?.Session.SetString(PreferredSpeedKey, value.ToString());
+                try
+                {
+                    _localStorage.SetItem(PreferredSpeedKey, value);
+                }
+                catch
+                {
+                    // Handle storage errors gracefully
+                }
             }
         }
     }
@@ -55,8 +90,14 @@ public record class VoicePreferences
         {
             if (_isEnabled.HasValue) return _isEnabled.Value;
             
-            var enabledStr = _contextAccessor.HttpContext?.Session.GetString(TtsIsEnabledKey);
-            _isEnabled = bool.TryParse(enabledStr, out var enabled) && enabled;
+            try
+            {
+                _isEnabled = _localStorage.GetItem<bool?>(TtsIsEnabledKey) ?? false;
+            }
+            catch
+            {
+                _isEnabled = false;
+            }
             return _isEnabled.Value;
         }
         set
@@ -64,7 +105,14 @@ public record class VoicePreferences
             if (_isEnabled != value)
             {
                 _isEnabled = value;
-                _contextAccessor.HttpContext?.Session.SetString(TtsIsEnabledKey, value.ToString());
+                try
+                {
+                    _localStorage.SetItem(TtsIsEnabledKey, value);
+                }
+                catch
+                {
+                    // Handle storage errors gracefully
+                }
             }
         }
     }
