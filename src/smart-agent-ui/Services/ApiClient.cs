@@ -273,7 +273,16 @@ public sealed class ApiClient(HttpClient httpClient)
             Headers = { { "Accept", "application/json" } },
             Content = new StringContent(System.Text.Json.JsonSerializer.Serialize(request), Encoding.UTF8, "application/json")
         };
-        httpRequest.SetBrowserResponseStreamingEnabled(true);
+
+
+
+
+        //TODO: disabled this on 9/18 - need to restore it!
+        //httpRequest.SetBrowserResponseStreamingEnabled(true);
+
+
+
+
         using var response = await httpClient.SendAsync(httpRequest, HttpCompletionOption.ResponseHeadersRead, cancellationToken);
         response.EnsureSuccessStatusCode();
         using var responseStream = await response.Content.ReadAsStreamAsync(cancellationToken);

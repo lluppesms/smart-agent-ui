@@ -13,8 +13,8 @@
 			@if (_questionAndAnswerMap is { Count: 0 })
 			{
 				<div class="d-flex align-content-center flex-wrap flex-grow-1 full-height">
-	
-					<Examples Profile=@_selectedProfileSummary Message="@AppConfiguration.HelloText" OnExampleClicked="@OnAskQuestionAsync" />
+
+					<Examples Profile=@_selectedProfileSummary Message="@SmartAgentUIConfiguration.HelloText" OnExampleClicked="@OnAskQuestionAsync" />
 
 					@if (_selectedProfileSummary != null && _selectedProfileSummary.PromptTemplates != null && _selectedProfileSummary.PromptTemplates.Any())
 					{
@@ -127,7 +127,7 @@
 						OnFileUpload="OnFileUpload"
 						OnModelSelection="OnModelSelection"
 						SupportsFileUpload=@_supportsFileUpload/>
-					
+
                     @if (_errorLoadingProfiles)
                     {
                       <MudText Typo="Typo.h5" Color="Color.Error">@_errorLoadingMessage</MudText>

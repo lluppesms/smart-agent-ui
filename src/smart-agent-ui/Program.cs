@@ -8,6 +8,7 @@ using Azure.Identity;
 using Azure.AI.Agents.Persistent;
 using Microsoft.SemanticKernel.Agents.AzureAI;
 using MudBlazor.Services;
+using System.Runtime.InteropServices.JavaScript;
 
 #pragma warning disable SKEXP0110
 
@@ -75,7 +76,7 @@ catch (Exception ex)
 {
     Console.WriteLine($"ERROR: Failed to configure Azure services: {ex.Message}");
     Console.WriteLine($"Stack trace: {ex.StackTrace}");
-    
+
     // Log missing configuration values that might cause issues
     var missingConfigs = new List<string>();
     if (string.IsNullOrEmpty(appConfiguration.AzureStorageAccountEndpoint))
@@ -84,12 +85,12 @@ catch (Exception ex)
         missingConfigs.Add("AzureSearchServiceEndpoint");
     if (string.IsNullOrEmpty(appConfiguration.CosmosDbEndpoint))
         missingConfigs.Add("CosmosDbEndpoint");
-    
+
     if (missingConfigs.Any())
     {
         Console.WriteLine($"Missing configuration values: {string.Join(", ", missingConfigs)}");
     }
-    
+
     Console.WriteLine("Application will continue without Azure services.");
     // Don't throw since we want the app to start even without Azure services
 }
@@ -177,12 +178,18 @@ app.Use(next => context =>
     return next(context);
 });
 
-// Map API endpoints 
+// Map API endpoints
 app.MapAgentManagementApi();
 app.MapChatApi();
 app.MapApi();
 
 app.MapCustomHealthChecks();
+
+#pragma warning disable CA1416 // Validate platform compatibility
+await JSHost.ImportAsync(
+    moduleName: nameof(JavaScriptModule),
+    moduleUrl: $"../js/iframe.js?{Guid.NewGuid()}" /* cache bust */);
+#pragma warning restore CA1416 // Validate platform compatibility
 
 Console.WriteLine("SmartAgentUI - Migration Complete! Application is running successfully.");
 app.Run();
