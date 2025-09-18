@@ -79,4 +79,12 @@ public class AppConfiguration
     public string? ProfileConfigurationBlobStorageContainer { get; init; }
     public string? ProfileConfiguration { get; init; }
     public string ProfileFileName { get; init; } = "profiles";
+
+    // Frontend configuration properties for compatibility
+    public static string ColorPaletteLightPrimary { get; set; } = "#005eb8";
+    public static string ColorPaletteLightSecondary { get; set; } = "#287FA4";
+    public static string ColorPaletteLightAppbarBackground { get; set; } = "#84B1CB";
+    public static string LogoImagePath { get; set; } = "icon-512.png";
+    public static int LogoImageWidth { get; set; } = 150;
+    public static string DisclaimerMessage { get; set; } = "DISCLAIMER MESSAGE";
 }

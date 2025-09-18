@@ -3,7 +3,7 @@
 using SmartAgentUI.Components;
 using static System.Net.WebRequestMethods;
 
-namespace SmartAgentUI.Shared.Shared;
+namespace SmartAgentUI.Shared;
 
 public sealed partial class MainLayout
 {
@@ -20,8 +20,8 @@ public sealed partial class MainLayout
             Primary = "#1277bd",
         }
     };
-    private bool _drawerOpen = false;
-    private bool _settingsOpen = false;
+    public bool _drawerOpen = false;
+    public bool _settingsOpen = false;
     private SettingsPanel? _settingsPanel;
 
     public bool _isDarkTheme
@@ -88,7 +88,7 @@ public sealed partial class MainLayout
     [Inject] public required IHttpContextAccessor HttpContextAccessor { get; set; }
     [Inject] public required IDialogService Dialog { get; set; }
 
-    private bool SettingsDisabled => new Uri(Nav.Uri).Segments.LastOrDefault() switch
+    public bool SettingsDisabled => new Uri(Nav.Uri).Segments.LastOrDefault() switch
     {
         "ask" or "chat" => false,
         _ => true
@@ -125,7 +125,7 @@ public sealed partial class MainLayout
 
     public void OnMenuClicked() => _drawerOpen = !_drawerOpen;
 
-    private void OnThemeChanged() => _isDarkTheme = !_isDarkTheme;
+    public void OnThemeChanged() => _isDarkTheme = !_isDarkTheme;
 
-    private void OnIsReversedChanged() => _isReversed = !_isReversed;
+    public void OnIsReversedChanged() => _isReversed = !_isReversed;
 }

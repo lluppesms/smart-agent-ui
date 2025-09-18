@@ -1,5 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 
+using System.Text;
+using System.Net.Http.Headers;
+
 namespace SmartAgentUI.Services;
 
 public sealed class ApiClient(HttpClient httpClient)
